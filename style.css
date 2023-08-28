@@ -21,7 +21,7 @@ body {
   padding: 15px 20px 20px;
 }
 
-.icon {
+.icons {
   display: flex;
   color: rgb(73, 73, 144);
 }
@@ -57,6 +57,7 @@ body {
   margin-top: 5px;
   color: gray;
   font-size: 16px;
+  text-overflow: ellipsis;
 }
 .box-footer {
   display: flex;
@@ -67,6 +68,7 @@ body {
   color: rgb(73, 73, 144);
   cursor: pointer;
 }
+
 .box-footer .menu li {
   height: 25px;
   font-size: 16px;
@@ -77,6 +79,23 @@ body {
 }
 .menu i:hover {
   background: #fff;
+}
+
+.box-footer .menu {
+  position: absolute;
+  padding: 5px 0;
+  background: #fff;
+  bottom: 0;
+  right: -5px;
+
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  box-shadow: 0 0 6px rgb(10, 11, 11, 0.15);
+  transition: transform 0.2s ease;
+}
+.box-footer:hover .menu {
+  transform: scale(0);
 }
 .box-footer .menu {
   position: absolute;
@@ -90,11 +109,11 @@ body {
   box-shadow: 0 0 6px rgb(10, 11, 11, 0.15);
   transition: transform 0.2s ease;
 }
-.box-footer:hover .menu {
-  transform: scale(0);
-}
 .menu li i {
   padding-right: 8px;
+}
+.menu .show {
+  display: flex;
 }
 .modal-outter {
   display: none;
